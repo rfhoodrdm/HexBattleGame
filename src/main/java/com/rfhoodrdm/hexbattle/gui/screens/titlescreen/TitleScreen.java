@@ -21,6 +21,8 @@ import com.rfhoodrdm.hexbattle.service.dataloader.asset.Asset;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.AssetRequest;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.AssetType;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.ImageAsset;
+import com.rfhoodrdm.hexbattle.service.screennavigator.ScreenNavigator;
+import com.rfhoodrdm.hexbattle.common.constants.ScreenName;
 
 @org.springframework.stereotype.Component
 public class TitleScreen extends JPanel implements RequiresLoadedData {
@@ -36,11 +38,11 @@ public class TitleScreen extends JPanel implements RequiresLoadedData {
 	
 	private BufferedImage backgroundImage;
 
-	public TitleScreen() {
+	public TitleScreen(ScreenNavigator screenNavigator) {
 		setLayout(new GridBagLayout());
 		setOpaque(false);
 		add(createTopSpacer(), createTopSpacerConstraints());
-		add(createButtonPanel(), createButtonPanelConstraints());
+		add(createButtonPanel(screenNavigator), createButtonPanelConstraints());
 		add(createBottomSpacer(), createBottomSpacerConstraints());
 	}
 
@@ -56,9 +58,10 @@ public class TitleScreen extends JPanel implements RequiresLoadedData {
 		return constraints;
 	}
 
-	private JPanel createButtonPanel() {
+	private JPanel createButtonPanel(ScreenNavigator screenNavigator) {
 		JButton newGameButton = createButton("New Game");
 		JButton creditsButton = createButton("Credits");
+		creditsButton.addActionListener(event -> screenNavigator.transitionToScreen(ScreenName.CREDITS_SCREEN));
 		JButton exitButton = createButton("Exit");
 		exitButton.addActionListener(event -> System.exit(0));
 

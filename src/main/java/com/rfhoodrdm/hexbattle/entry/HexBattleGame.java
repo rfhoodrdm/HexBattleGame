@@ -10,6 +10,8 @@ import com.rfhoodrdm.hexbattle.gui.Gui;
 import com.rfhoodrdm.hexbattle.service.dataloader.DataLoader;
 import com.rfhoodrdm.hexbattle.service.dataloader.DataLoaderException;
 import com.rfhoodrdm.hexbattle.service.dataloader.RequiresLoadedData;
+import com.rfhoodrdm.hexbattle.service.screennavigator.ScreenNavigator;
+import com.rfhoodrdm.hexbattle.common.constants.ScreenName;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,6 +24,7 @@ public class HexBattleGame  implements ApplicationRunner{
 	private final List<RequiresLoadedData> componentsThatRequireData;
 	private final DataLoader dataLoader;
 	private final Gui gui;
+	private final ScreenNavigator screenNavigator;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
@@ -36,6 +39,7 @@ public class HexBattleGame  implements ApplicationRunner{
 		}
 		
 		gui.setVisible(true);
+		screenNavigator.transitionToScreen(ScreenName.TITLE_SCREEN);
 		
 		//start the various threads.
 	}
