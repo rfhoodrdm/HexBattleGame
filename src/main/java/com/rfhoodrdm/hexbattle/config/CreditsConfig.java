@@ -9,14 +9,23 @@ import lombok.extern.slf4j.Slf4j;
 @Configuration
 @Data
 @Slf4j
-public class GameConfig {
+public class CreditsConfig {
 
-	private String gameName = "HexBattle";
-	private String versionNumber = "1.0.0";
-	
+	private String creditsText = """
+			Lead Developer: 
+				Robert H.
+			
+			Artwork by:
+				ChatGPT
+				Codex
+			
+			Music by:
+				Google Gemini
+			
+			""";
 	
 	@PostConstruct
 	public void init() {
-		log.info("Game Config: {}", this.toString());
+		log.info("Credits Config: {}", this.toString());
 	}
 }

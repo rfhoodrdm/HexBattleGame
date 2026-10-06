@@ -1,4 +1,4 @@
-package com.rfhoodrdm.hexbattle.gui;
+package com.rfhoodrdm.hexbattle.common.constants;
 
 public enum ScreenName {
 	CREDITS_SCREEN,		//the screen showing the creators and contributors of the game
