@@ -25,3 +25,7 @@ The window should be a JFrame.
     - Fill/Cover the image in the Frame.
     - Draw the image onto the Panel's background by Overriding paintComponent(Graphics g);
     - Have a field of type BufferedImage and leverage the dataloader service to fetch the image on startup.
+- Has two buttons, "New Game", "Credits", and "Exit"
+    - Centered horizontally.
+    - Towards the bottom, but not directly against the bottom. Maybe starting at around 65% down the screen's height.
+    - Use the TextButton as the base class, and specify a ButtonStyle from the ButtonStyles library class.

@@ -6,6 +6,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 
 import com.rfhoodrdm.hexbattle.config.GameConfig;
+import com.rfhoodrdm.hexbattle.gui.screens.titlescreen.TitleScreen;
 
 public class GameFrame extends JFrame {
 

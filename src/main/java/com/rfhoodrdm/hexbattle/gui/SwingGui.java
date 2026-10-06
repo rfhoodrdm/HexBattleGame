@@ -7,6 +7,7 @@ import javax.swing.SwingUtilities;
 import org.springframework.stereotype.Component;
 
 import com.rfhoodrdm.hexbattle.config.GameConfig;
+import com.rfhoodrdm.hexbattle.gui.screens.titlescreen.TitleScreen;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
