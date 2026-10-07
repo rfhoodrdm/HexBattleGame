@@ -1,5 +1,7 @@
 package com.rfhoodrdm.hexbattle.service.soundmanager;
 
+import java.util.Optional;
+
 import com.rfhoodrdm.hexbattle.service.soundmanager.library.SoundTrackSequence;
 
 public interface SoundManager {
@@ -14,4 +16,6 @@ public interface SoundManager {
 	 * Stops playing all sound tracks immediately.
 	 */
 	public void stopPlayingAllSoundTracks();
+
+	public Optional<SoundTrackSequence> getCurrentlyPlayingSequenceMaybe();
 }

@@ -1,6 +1,5 @@
 package com.rfhoodrdm.hexbattle.service.soundmanager.library;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static com.rfhoodrdm.hexbattle.service.soundmanager.library.SoundTrack.*;
@@ -17,7 +16,6 @@ public enum SoundTrackSequence {
 	}
 	
 	public List<SoundTrack> getSoundTrackList() {
-		//TODO: make and return a defensive copy of the list.
-		return new ArrayList<>();	//stub value.
+		return List.copyOf(soundTrackList);
 	}
 }

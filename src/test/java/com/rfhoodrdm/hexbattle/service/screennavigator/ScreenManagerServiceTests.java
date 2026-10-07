@@ -2,6 +2,8 @@ package com.rfhoodrdm.hexbattle.service.screennavigator;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.Optional;
+
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 
@@ -59,6 +61,11 @@ class ScreenManagerServiceTests {
 
 		@Override
 		public void stopPlayingAllSoundTracks() {
+		}
+
+		@Override
+		public Optional<SoundTrackSequence> getCurrentlyPlayingSequenceMaybe() {
+			return Optional.ofNullable(playedSequence);
 		}
 	}
 }
