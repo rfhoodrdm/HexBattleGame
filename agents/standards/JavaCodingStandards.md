@@ -8,3 +8,6 @@
     - processResult(result);
     - This as opposed to processResult(computeResult());
 - Services each get their own package.
+- Favor defining significant values, especially ones which are reused or potentially re-usable, as public static constants.
+    - Small numbers of these may be listed towards the top of classes.
+    - If the quantity of constants grows large, you may refactor them to a separate class that exists solely to hold them.
