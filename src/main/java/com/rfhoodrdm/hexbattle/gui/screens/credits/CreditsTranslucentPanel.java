@@ -11,6 +11,7 @@ import javax.swing.JPanel;
 import org.springframework.stereotype.Component;
 
 import com.rfhoodrdm.hexbattle.config.CreditsConfig;
+import com.rfhoodrdm.hexbattle.gui.basecomponent.panel.PanelStyles;
 import com.rfhoodrdm.hexbattle.gui.basecomponent.textarea.GameTextArea;
 import com.rfhoodrdm.hexbattle.gui.basecomponent.textarea.TextAreaStyles;
 
@@ -18,7 +19,7 @@ import com.rfhoodrdm.hexbattle.gui.basecomponent.textarea.TextAreaStyles;
 public class CreditsTranslucentPanel extends JPanel {
 
 	private static final long serialVersionUID = 1L;
-	private static final Color BACKGROUND_COLOR = new Color(0, 0, 0, 153);
+	private static final Color BACKGROUND_COLOR = PanelStyles.BACKGROUND_TRANSLUCENT_PANEL_COLOR;
 	private static final int TEXT_PADDING = 24;
 
 	public CreditsTranslucentPanel(CreditsConfig creditsConfig) {

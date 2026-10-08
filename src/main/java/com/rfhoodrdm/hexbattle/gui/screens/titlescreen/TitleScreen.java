@@ -60,6 +60,7 @@ public class TitleScreen extends JPanel implements RequiresLoadedData {
 
 	private JPanel createButtonPanel(ScreenNavigator screenNavigator) {
 		JButton newGameButton = createButton("New Game");
+		newGameButton.addActionListener(event -> screenNavigator.transitionToScreen(ScreenName.SETUP_SCREEN));
 		JButton creditsButton = createButton("Credits");
 		creditsButton.addActionListener(event -> screenNavigator.transitionToScreen(ScreenName.CREDITS_SCREEN));
 		JButton exitButton = createButton("Exit");
