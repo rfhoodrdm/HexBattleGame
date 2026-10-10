@@ -29,8 +29,6 @@ public class TitleScreen extends JPanel implements RequiresLoadedData {
 
 	private static final long serialVersionUID = 1L;
 	private static final String SPLASH_SCREEN_ASSET_NAME = "background/SplashScreen.png";
-	private static final int BUTTON_WIDTH = 220;
-	private static final int BUTTON_HEIGHT = 48;
 	private static final int BUTTON_GAP = 12;
 	
 	private static final double BUTTON_SPACER_WEIGHT_TOP = 0.70;
@@ -78,8 +76,10 @@ public class TitleScreen extends JPanel implements RequiresLoadedData {
 	}
 
 	private JButton createButton(String text) {
-		Dimension buttonSize = new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT);
-		GameTextButton button = new GameTextButton(text, ButtonStyles.IMPERIAL_OPTION);
+		Dimension buttonSize = new Dimension(
+				ButtonStyles.MENU_BUTTON_WIDTH,
+				ButtonStyles.MENU_BUTTON_HEIGHT);
+		GameTextButton button = new GameTextButton(text, ButtonStyles.IMPERIAL_ACTION);
 		button.setAlignmentX(Component.CENTER_ALIGNMENT);
 		button.setPreferredSize(buttonSize);
 		button.setMinimumSize(buttonSize);

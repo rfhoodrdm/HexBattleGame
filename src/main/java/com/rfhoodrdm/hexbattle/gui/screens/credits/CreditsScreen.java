@@ -29,9 +29,6 @@ public class CreditsScreen extends JPanel implements RequiresLoadedData {
 	private static final int SCREEN_PADDING = 40;
 	private static final int COMPONENT_GAP = 16;
 	private static final int BOTTOM_PADDING = 12;
-	
-	private static final int BUTTON_WIDTH = 220;
-	private static final int BUTTON_HEIGHT = 48;
 
 	private BufferedImage backgroundImage;
 
@@ -45,8 +42,10 @@ public class CreditsScreen extends JPanel implements RequiresLoadedData {
 	}
 
 	private JPanel createBackButtonPanel(ScreenNavigator screenNavigator) {
-		Dimension buttonSize = new Dimension(BUTTON_WIDTH, BUTTON_HEIGHT);
-		GameTextButton backButton = new GameTextButton("Back", ButtonStyles.IMPERIAL_OPTION);
+		Dimension buttonSize = new Dimension(
+				ButtonStyles.MENU_BUTTON_WIDTH,
+				ButtonStyles.MENU_BUTTON_HEIGHT);
+		GameTextButton backButton = new GameTextButton("Back", ButtonStyles.IMPERIAL_ACTION);
 
 		backButton.setPreferredSize(buttonSize);
 		backButton.setMinimumSize(buttonSize);

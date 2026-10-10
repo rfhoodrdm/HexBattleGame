@@ -9,6 +9,11 @@ public class TitledGamePanel extends GameTranslucentPanel {
 	private static final long serialVersionUID = 1L;
 
 	public TitledGamePanel(String title) {
+		this(title, true);
+	}
+
+	public TitledGamePanel(String title, boolean paintTranslucentBackground) {
+		super(paintTranslucentBackground);
 		Border lineBorder = BorderFactory.createLineBorder(PanelStyles.TITLED_BORDER_COLOR);
 		TitledBorder titledBorder = BorderFactory.createTitledBorder(
 				lineBorder,
