@@ -9,7 +9,7 @@ import javax.swing.JButton;
  */
 public class GameTextButton extends JButton {
 
-	private static final long serialVersionUID = -5246541195702790764L;
+	private static final long serialVersionUID = 1L;
 	
 	private final ButtonStyle style;
 	

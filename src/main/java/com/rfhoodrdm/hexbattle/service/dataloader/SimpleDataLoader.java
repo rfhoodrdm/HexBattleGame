@@ -7,6 +7,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.UUID;
 
 import javax.imageio.ImageIO;
 import javax.sound.sampled.AudioInputStream;
@@ -20,6 +21,7 @@ import org.springframework.stereotype.Service;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.Asset;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.AssetRequest;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.ImageAsset;
+import com.rfhoodrdm.hexbattle.service.dataloader.asset.MapAsset;
 import com.rfhoodrdm.hexbattle.service.dataloader.asset.SoundAsset;
 
 
@@ -55,7 +57,13 @@ public class SimpleDataLoader implements DataLoader {
 		return switch (Objects.requireNonNull(assetRequest.assetType(), "Asset type must not be null")) {
 			case IMAGE -> loadImage(assetRequest);
 			case SOUND -> loadSound(assetRequest);
+			case MAP -> loadMap(assetRequest);
 		};
+	}
+
+	private MapAsset loadMap(AssetRequest assetRequest) {
+		//stub value. TODO: implement actual load of map data when we define the map data record object and have files to actually load.
+		return new MapAsset(assetRequest.assetName(), UUID.randomUUID());
 	}
 
 	private ImageAsset loadImage(AssetRequest assetRequest) {
